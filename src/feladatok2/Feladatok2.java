@@ -33,8 +33,8 @@ public class Feladatok2 {
         //feladat15();
         //feladat16();
         //feladat17();
-        feladat18();
-        
+        //feladat18();
+        feladat21();
         
         
     }
@@ -177,9 +177,9 @@ public class Feladatok2 {
 
     private static void feladat18() throws IOException {
         
-         System.out.println("Kerem az elso szamot : ");
+        System.out.println("Kerem az elso szamot : ");
         int elsoSzam = Integer.parseInt(br.readLine());
-         System.out.println("Kerem az elso szamot : ");
+        System.out.println("Kerem az elso szamot : ");
         int masodikSzam = Integer.parseInt(br.readLine());
         int nagyobbSzam;
         int legnagyobbKozos = 1;
@@ -200,6 +200,35 @@ public class Feladatok2 {
         
         System.out.println(legnagyobbKozos);
         
+        
+        
+    }
+
+    private static void feladat21() {
+        
+        for (Integer i = 100; i < 1000; i++) {
+            
+            
+            char[] s = i.toString().toCharArray();
+            int[] szamjegyek = new int[s.length];
+            for (int j = 0; j < szamjegyek.length; j++) {
+                szamjegyek[j] = Character.getNumericValue(s[j]);
+            }
+            int szamjegyekOsszege = 0;
+            for (int j = 0; j < szamjegyek.length; j++) {
+                
+                szamjegyekOsszege += Math.pow(szamjegyek[j], 3);
+                
+            }
+            
+            if (szamjegyekOsszege == i) {
+                System.out.println(i);
+            }
+            
+            
+
+            
+        }
         
         
     }
